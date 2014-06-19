@@ -1,0 +1,15 @@
+# src/Acme/StoreBundleResources/config/routing.yml
+insertar:
+   path: /yupi
+   defaults: { _controller: AcmeStoreBundle:Default:create }
+mostrar:
+   pattern: /veryver/{id}
+   defaults: { _controller: AcmeStoreBundle:Default:show, id: 1 }
+   requirements:
+     id: \d+
+mostrarnyp:
+   pattern: /verynover/{nombre}/{descripcion}
+   defaults: { _controller: AcmeStoreBundle:Default:show2 }
+   requirements:
+     nombre: \w+
+     descripcion: \w+
